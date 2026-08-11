@@ -23,6 +23,7 @@ export const about = {
   paragraphs: [
     "My name is **Mohammed Aymen Benzine**. I am a Computer Science Engineer, an AI researcher, and a full-stack developer based in Ouargla, Algeria. I have a **Master's degree in Artificial Intelligence and Data Science** from Kasdi Merbah University. I finished among the **top 3 students** in my class and received the **Five-Star Student** award. My final thesis got an **Excellent grade** and I defended it in front of the academic jury.",
     "My research is about **knowledge distillation**, light deep learning models, and **Explainable AI** for medical images, mainly brain tumor detection. I built a model that keeps over 95% accuracy while cutting the number of parameters by about 87%. This makes AI tools easier to use in hospitals with limited computer power.",
+    "I am now looking to take this research further at the doctoral level. I have applied for a **PhD position in Artificial Intelligence** at **BRGM** (Bureau de Recherches Géologiques et Minières), France's national geological survey, to keep building efficient, explainable AI systems for real-world scientific and industrial data.",
     "I work as an **IT Engineer at ETTR**, where I manage the company's full IT network: VLANs, fiber optic lines, servers, security cameras, and Python/SQL tools that I build myself. As a **freelance developer for over 4 years**, I have built websites, desktop apps, and finance dashboards for real clients.",
     "I also help businesses with **presentation design**: Word reports, Excel sheets, PowerPoint decks, and Canva designs, for people who need clear, professional documents fast.",
     "I co-founded and helped lead **AI Nexus Club Ouargla**, a student group that teaches AI skills and connects students with researchers in our region.",
@@ -62,6 +63,34 @@ export const education = [
 ];
 
 export const experience = [
+  {
+    icon: "Brain",
+    role: "Machine Learning Intern",
+    company: "PioPetro — Sponsored by SLB, Halliburton & NOV",
+    period: "Aug 2026 – Present",
+    points: [
+      "Selected for the PioPetro Summer Internship Program, an online, industry-backed program supporting the next generation of energy professionals",
+      "Apply machine learning techniques to real-world problems in the energy and petroleum sector",
+      "Work alongside other student engineers and researchers in a remote team setting, gaining exposure to how AI is used across geoscience, petroleum engineering, and energy operations",
+      "Build and evaluate ML models using industry-style datasets, from data cleaning through model evaluation",
+      "Strengthen Python-based ML workflows in a professional, industry-sponsored setting",
+    ],
+    tags: ["Python", "Machine Learning", "Data Analysis", "Energy Sector AI", "Model Evaluation"],
+  },
+  {
+    icon: "Tag",
+    role: "Real-Time Data Annotator",
+    company: "Genius Sports",
+    period: "Jun 2026 – Present",
+    points: [
+      "Annotate live sporting events in real time, tagging in-game data points used to power sports analytics and data products",
+      "Maintain high accuracy and speed while working against strict live-event time constraints",
+      "Follow detailed, sport-specific data collection standards to keep data consistent and reliable",
+      "Support downstream systems, such as analytics platforms and broadcast graphics, that depend on accurate real-time data",
+      "Work as part of a distributed, global data operations team",
+    ],
+    tags: ["Real-Time Data", "Sports Analytics", "Data Annotation", "Quality Assurance", "Remote Collaboration"],
+  },
   {
     icon: "Settings",
     role: "IT Engineer / Data Analyst",
@@ -107,30 +136,50 @@ export const experience = [
   },
 ];
 
-export const leadership = {
-  org: "AI Nexus Club, Ouargla",
-  role: "Co-Founder & Co-Leader",
-  link: "https://www.linkedin.com/company/ai-nexus-club-ouargla/",
-  period: "Mar 2024 – Jun 2025",
-  desc: "I helped start and run AI Nexus Club Ouargla, a student group that teaches people about Artificial Intelligence. We organized learning activities, helped students and researchers share knowledge, and built a small but active AI community in our city.",
-  points: [
-    "Helped start the AI community from zero",
-    "Co-led club events and activities",
-    "Organized AI workshops and study sessions",
-    "Spread AI awareness across the university",
-    "Worked together with students and researchers",
-    "Took part in real AI project work",
-    "Shared knowledge and mentored newer members",
-    "Helped build a lasting local AI community",
-  ],
-};
+export const leadership = [
+  {
+    icon: "Bot",
+    org: "AI Nexus Club, Ouargla",
+    role: "Co-Founder & Co-Leader",
+    link: "https://www.linkedin.com/company/ai-nexus-club-ouargla/",
+    linkLabel: "View organization on LinkedIn",
+    period: "Mar 2024 – Jun 2025",
+    desc: "I helped start and run AI Nexus Club Ouargla, a student group that teaches people about Artificial Intelligence. We organized learning activities, helped students and researchers share knowledge, and built a small but active AI community in our city.",
+    points: [
+      "Helped start the AI community from zero",
+      "Co-led club events and activities",
+      "Organized AI workshops and study sessions",
+      "Spread AI awareness across the university",
+      "Worked together with students and researchers",
+      "Took part in real AI project work",
+      "Shared knowledge and mentored newer members",
+      "Helped build a lasting local AI community",
+    ],
+    tags: ["Community Leadership", "AI Advocacy", "Event Organization", "Mentorship", "Research Collaboration"],
+  },
+  {
+    icon: "Network",
+    org: "451 Alliance",
+    role: "Member",
+    link: "https://www.451alliance.com/",
+    linkLabel: "Visit the 451 Alliance",
+    period: "Aug 2026 – Present",
+    desc: "Became an official member of the 451 Alliance, an invitation-only global network of IT and business professionals under S&P Global / 451 Research. Members contribute to ongoing industry surveys and, in return, get access to research, reports, and insights on enterprise technology and business trends.",
+    points: [
+      "Joined a global think tank of IT and business professionals",
+      "Contribute to industry research through member surveys",
+      "Access exclusive reports and insights on enterprise technology trends",
+    ],
+    tags: ["Industry Research", "Enterprise IT Trends", "Global Network"],
+  },
+];
 
 export const skills = [
   {
     icon: "BrainCircuit",
-    name: "Artificial Intelligence",
+    name: "Artificial Intelligence / MLOps",
     color: "indigo",
-    items: ["Machine Learning", "Deep Learning", "Knowledge Distillation", "Model Compression", "Transfer Learning", "MobileNetV2", "TensorFlow", "Keras", "Scikit-learn"],
+    items: ["Machine Learning", "Deep Learning", "Knowledge Distillation", "Model Compression", "Transfer Learning", "MobileNetV2", "TensorFlow", "Keras", "Scikit-learn", "Docker", "FastAPI", "ONNX Runtime"],
   },
   {
     icon: "BarChart3",
@@ -160,7 +209,7 @@ export const skills = [
     icon: "Globe",
     name: "Web & App Dev",
     color: "rose",
-    items: ["React.js", "Next.js", "JavaFX", "PySide6", "REST APIs", "Auth Systems", "Figma"],
+    items: ["React.js", "Next.js", "JavaFX", "PySide6", "REST APIs", "Auth Systems", "Figma", "Electron"],
   },
   {
     icon: "Database",
