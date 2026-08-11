@@ -12,8 +12,12 @@ function LeadershipCard({ entry, delay }) {
       style={{ transitionDelay: delay }}
     >
       <div className="flex md:flex-col items-center gap-4">
-        <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo to-violet flex items-center justify-center shadow-lg shadow-indigo/35">
-          <Icon size={32} className="text-white" />
+        <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo to-violet flex items-center justify-center shadow-lg shadow-indigo/35 overflow-hidden">
+          {entry.logo ? (
+            <img src={entry.logo} alt={`${entry.org} logo`} className="w-12 h-12 object-contain rounded-lg bg-white/95 p-1.5" loading="lazy" />
+          ) : (
+            <Icon size={32} className="text-white" />
+          )}
         </div>
         <span className="bg-indigo/10 border border-indigo/20 rounded-full px-3.5 py-1 text-xs text-indigo-200 font-mono whitespace-nowrap">
           {entry.period}

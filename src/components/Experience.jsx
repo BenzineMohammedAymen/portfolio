@@ -7,8 +7,12 @@ function ExpItem({ exp, delay }) {
   const Icon = Icons[exp.icon] || Icons.Briefcase;
   return (
     <div ref={ref} className={`reveal ${inView ? "in-view" : ""} grid grid-cols-[48px_1fr] gap-5 items-start`} style={{ transitionDelay: delay }}>
-      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo to-violet flex items-center justify-center shadow-lg shadow-indigo/30 relative z-10 flex-shrink-0">
-        <Icon size={18} className="text-white" />
+      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo to-violet flex items-center justify-center shadow-lg shadow-indigo/30 relative z-10 flex-shrink-0 overflow-hidden">
+        {exp.logo ? (
+          <img src={exp.logo} alt={`${exp.company} logo`} className="w-6 h-6 object-contain rounded-sm bg-white/95 p-0.5" loading="lazy" />
+        ) : (
+          <Icon size={18} className="text-white" />
+        )}
       </div>
       <div className="bg-card border border-border rounded-2xl p-7 hover:border-white/15 hover:translate-x-1 transition-all">
         <div className="flex items-start justify-between gap-4 flex-wrap mb-4">

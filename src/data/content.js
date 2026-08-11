@@ -23,7 +23,6 @@ export const about = {
   paragraphs: [
     "My name is **Mohammed Aymen Benzine**. I am a Computer Science Engineer, an AI researcher, and a full-stack developer based in Ouargla, Algeria. I have a **Master's degree in Artificial Intelligence and Data Science** from Kasdi Merbah University. I finished among the **top 3 students** in my class and received the **Five-Star Student** award. My final thesis got an **Excellent grade** and I defended it in front of the academic jury.",
     "My research is about **knowledge distillation**, light deep learning models, and **Explainable AI** for medical images, mainly brain tumor detection. I built a model that keeps over 95% accuracy while cutting the number of parameters by about 87%. This makes AI tools easier to use in hospitals with limited computer power.",
-    "I am now looking to take this research further at the doctoral level. I have applied for a **PhD position in Artificial Intelligence** at **BRGM** (Bureau de Recherches Géologiques et Minières), France's national geological survey, to keep building efficient, explainable AI systems for real-world scientific and industrial data.",
     "I work as an **IT Engineer at ETTR**, where I manage the company's full IT network: VLANs, fiber optic lines, servers, security cameras, and Python/SQL tools that I build myself. As a **freelance developer for over 4 years**, I have built websites, desktop apps, and finance dashboards for real clients.",
     "I also help businesses with **presentation design**: Word reports, Excel sheets, PowerPoint decks, and Canva designs, for people who need clear, professional documents fast.",
     "I co-founded and helped lead **AI Nexus Club Ouargla**, a student group that teaches AI skills and connects students with researchers in our region.",
@@ -65,6 +64,7 @@ export const education = [
 export const experience = [
   {
     icon: "Brain",
+    logo: "https://www.google.com/s2/favicons?domain=piopetro.org&sz=128",
     role: "Machine Learning Intern",
     company: "PioPetro — Sponsored by SLB, Halliburton & NOV",
     period: "Aug 2026 – Present",
@@ -79,6 +79,7 @@ export const experience = [
   },
   {
     icon: "Tag",
+    logo: "https://www.google.com/s2/favicons?domain=geniussports.com&sz=128",
     role: "Real-Time Data Annotator",
     company: "Genius Sports",
     period: "Jun 2026 – Present",
@@ -159,6 +160,7 @@ export const leadership = [
   },
   {
     icon: "Network",
+    logo: "https://www.google.com/s2/favicons?domain=451alliance.com&sz=128",
     org: "451 Alliance",
     role: "Member",
     link: "https://www.451alliance.com/",
