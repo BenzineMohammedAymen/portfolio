@@ -20,7 +20,7 @@ export default function Contact() {
           <br />
           <span className="grad-text">Great Together</span>
         </h2>
-        <p className="text-slate-400 max-w-lg mx-auto mb-10 leading-relaxed">
+        <p className="text-muted max-w-lg mx-auto mb-10 leading-relaxed">
           I am open to AI engineering, data science, software engineering, and research roles, in Algeria or remotely, anywhere in the world.
         </p>
 
@@ -31,14 +31,14 @@ export default function Contact() {
               href={c.href}
               target={c.href.startsWith("http") ? "_blank" : undefined}
               rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="bg-card border border-border rounded-2xl p-5 flex items-center gap-3.5 hover:border-white/15 hover:-translate-y-0.5 transition-all"
+              className="bg-card border border-border rounded-2xl p-5 flex items-center gap-3.5 hover:border-line/15 hover:-translate-y-0.5 transition-all"
             >
               <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${c.color}`}>
                 <c.icon size={17} />
               </div>
               <div>
-                <div className="text-[11px] text-slate-400 uppercase tracking-wide mb-0.5">{c.label}</div>
-                <div className="text-sm font-semibold text-white">{c.value}</div>
+                <div className="text-[11px] text-muted uppercase tracking-wide mb-0.5">{c.label}</div>
+                <div className="text-sm font-semibold text-fg">{c.value}</div>
               </div>
             </a>
           ))}

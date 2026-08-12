@@ -29,13 +29,13 @@ function ProjectCard({ project, onOpen, delay }) {
   return (
     <div
       ref={ref}
-      className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl overflow-hidden flex flex-col cursor-pointer hover:border-white/20 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/35 transition-all`}
+      className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl overflow-hidden flex flex-col cursor-pointer hover:border-line/20 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/35 transition-all`}
       style={{ transitionDelay: delay }}
       onClick={() => onOpen(project)}
     >
       <div className="h-[195px] relative overflow-hidden flex-shrink-0">
         <Visual />
-        <div className={`absolute top-3 left-3 bg-bg/85 border border-white/10 rounded-full px-2.5 py-1 text-[11px] font-bold backdrop-blur ${tagColor[project.catColor]}`}>
+        <div className={`absolute top-3 left-3 bg-bg/85 border border-line/10 rounded-full px-2.5 py-1 text-[11px] font-bold backdrop-blur ${tagColor[project.catColor]}`}>
           {project.catTag}
         </div>
         {project.live && (
@@ -55,7 +55,7 @@ function ProjectCard({ project, onOpen, delay }) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="absolute top-3 right-3 bg-bg/85 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-slate-300 flex items-center gap-1.5 backdrop-blur hover:border-indigo hover:text-indigo-300 transition"
+            className="absolute top-3 right-3 bg-bg/85 border border-line/10 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 dark:text-slate-300 flex items-center gap-1.5 backdrop-blur hover:border-indigo hover:text-indigo-300 transition"
           >
             <Github size={13} /> GitHub
           </a>
@@ -63,8 +63,8 @@ function ProjectCard({ project, onOpen, delay }) {
       </div>
       <div className="p-5 flex-1 flex flex-col">
         <div className={`text-[11px] font-bold uppercase tracking-wider mb-2 ${tagColor[project.typeColor]}`}>{project.type}</div>
-        <div className="text-base font-bold text-white mb-2.5 leading-snug">{project.title}</div>
-        <p className="text-sm text-slate-400 leading-relaxed mb-4 flex-1">{project.desc}</p>
+        <div className="text-base font-bold text-fg mb-2.5 leading-snug">{project.title}</div>
+        <p className="text-sm text-muted leading-relaxed mb-4 flex-1">{project.desc}</p>
         <div className="flex flex-wrap gap-1.5 mb-4">
           {project.metrics.map((m) => (
             <span key={m} className="bg-indigo/10 border border-indigo/20 rounded-md px-2 py-0.5 text-[11px] text-indigo-200 font-semibold">
@@ -74,7 +74,7 @@ function ProjectCard({ project, onOpen, delay }) {
         </div>
         <div className="flex flex-wrap gap-1.5">
           {project.stack.map((s) => (
-            <span key={s} className="bg-white/5 border border-white/10 rounded-md px-2 py-0.5 text-[11px] text-slate-400">
+            <span key={s} className="bg-line/5 border border-line/10 rounded-md px-2 py-0.5 text-[11px] text-muted">
               {s}
             </span>
           ))}
@@ -97,7 +97,7 @@ export default function Projects() {
           <span className="w-4 h-0.5 bg-indigo-400 rounded" /> Projects
         </div>
         <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Things I Have Built</h2>
-        <p className="text-slate-400 max-w-xl mb-10 leading-relaxed">
+        <p className="text-muted max-w-xl mb-10 leading-relaxed">
           From AI research and medical deep learning to finance apps and business IT tools: real problems, real solutions.
         </p>
 
@@ -108,8 +108,8 @@ export default function Projects() {
               onClick={() => setFilter(f.key)}
               className={`rounded-full px-4 py-1.5 text-sm transition border ${
                 filter === f.key
-                  ? "bg-gradient-to-br from-indigo to-violet border-transparent text-white"
-                  : "border-white/15 text-slate-400 hover:text-white"
+                  ? "bg-gradient-to-br from-indigo to-violet border-transparent text-fg"
+                  : "border-line/15 text-muted hover:text-fg"
               }`}
             >
               {f.label}

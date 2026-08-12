@@ -17,20 +17,20 @@ function SkillCard({ skill, delay }) {
   return (
     <div
       ref={ref}
-      className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl p-6 hover:border-white/15 hover:-translate-y-1 transition-all`}
+      className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl p-6 hover:border-line/15 hover:-translate-y-1 transition-all`}
       style={{ transitionDelay: delay }}
     >
       <div className="flex items-center gap-3 mb-4">
         <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${colorMap[skill.color]}`}>
           <Icon size={17} />
         </div>
-        <div className="text-sm font-bold text-white">{skill.name}</div>
+        <div className="text-sm font-bold text-fg">{skill.name}</div>
       </div>
       <div className="flex flex-wrap gap-1.5">
         {skill.items.map((item) => (
           <span
             key={item}
-            className="bg-white/[0.04] border border-white/10 rounded-md px-2.5 py-1 text-xs text-slate-400 hover:bg-indigo/10 hover:border-indigo/25 hover:text-indigo-200 transition cursor-default"
+            className="bg-line/[0.04] border border-line/10 rounded-md px-2.5 py-1 text-xs text-muted hover:bg-indigo/10 hover:border-indigo/25 hover:text-indigo-200 transition cursor-default"
           >
             {item}
           </span>
@@ -48,7 +48,7 @@ export default function Skills() {
           <span className="w-4 h-0.5 bg-indigo-400 rounded" /> Skills
         </div>
         <h2 className="text-3xl md:text-4xl font-extrabold mb-4">What I Can Do</h2>
-        <p className="text-slate-400 max-w-xl mb-14 leading-relaxed">
+        <p className="text-muted max-w-xl mb-14 leading-relaxed">
           A wide range of skills covering AI research, data science, full-stack development, IT networks, and business document design.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

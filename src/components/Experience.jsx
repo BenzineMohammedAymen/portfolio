@@ -11,13 +11,13 @@ function ExpItem({ exp, delay }) {
         {exp.logo ? (
           <img src={exp.logo} alt={`${exp.company} logo`} className="w-6 h-6 object-contain rounded-sm bg-white/95 p-0.5" loading="lazy" />
         ) : (
-          <Icon size={18} className="text-white" />
+          <Icon size={18} className="text-fg" />
         )}
       </div>
-      <div className="bg-card border border-border rounded-2xl p-7 hover:border-white/15 hover:translate-x-1 transition-all">
+      <div className="bg-card border border-border rounded-2xl p-7 hover:border-line/15 hover:translate-x-1 transition-all">
         <div className="flex items-start justify-between gap-4 flex-wrap mb-4">
           <div>
-            <div className="text-lg font-bold text-white">{exp.role}</div>
+            <div className="text-lg font-bold text-fg">{exp.role}</div>
             <div className="text-sm text-indigo-300 font-semibold mt-0.5">{exp.company}</div>
           </div>
           <span className="bg-cyan/10 border border-cyan/20 rounded-full px-3 py-1 text-xs text-cyan-300 font-mono whitespace-nowrap h-fit">
@@ -26,7 +26,7 @@ function ExpItem({ exp, delay }) {
         </div>
         <ul className="space-y-2 mb-5">
           {exp.points.map((p, i) => (
-            <li key={i} className="text-sm text-slate-400 leading-relaxed pl-5 relative">
+            <li key={i} className="text-sm text-muted leading-relaxed pl-5 relative">
               <span className="absolute left-0 top-[0.6rem] w-1.5 h-1.5 rounded-full bg-cyan-400" />
               {p}
             </li>
@@ -34,7 +34,7 @@ function ExpItem({ exp, delay }) {
         </ul>
         <div className="flex flex-wrap gap-2">
           {exp.tags.map((t) => (
-            <span key={t} className="bg-white/5 border border-white/10 rounded-md px-2.5 py-1 text-xs text-slate-400">
+            <span key={t} className="bg-line/5 border border-line/10 rounded-md px-2.5 py-1 text-xs text-muted">
               {t}
             </span>
           ))}
@@ -52,7 +52,7 @@ export default function Experience() {
           <span className="w-4 h-0.5 bg-indigo-400 rounded" /> Experience
         </div>
         <h2 className="text-3xl md:text-4xl font-extrabold mb-4">My Work</h2>
-        <p className="text-slate-400 max-w-xl mb-14 leading-relaxed">
+        <p className="text-muted max-w-xl mb-14 leading-relaxed">
           From running a company's IT network to building software and AI tools as a freelancer.
         </p>
         <div className="flex flex-col gap-6 relative">

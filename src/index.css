@@ -2,22 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-bg: 255 255 255;
+  --color-bg2: 246 247 251;
+  --color-card: 255 255 255;
+  --color-card2: 248 249 253;
+  --color-border: rgba(15, 23, 42, 0.09);
+  --color-fg: 15 23 42;
+  --color-muted: 71 85 105;
+  --color-line: 15 23 42;
+}
+
+.dark {
+  --color-bg: 8 8 16;
+  --color-bg2: 12 12 24;
+  --color-card: 14 14 30;
+  --color-card2: 19 19 37;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-fg: 255 255 255;
+  --color-muted: 148 163 184;
+  --color-line: 255 255 255;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #080810;
-  color: #eeeef5;
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-fg));
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #080810;
+  background: rgb(var(--color-bg));
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(99, 102, 241, 0.35);
@@ -25,7 +48,7 @@ body {
 }
 
 .grad-text {
-  background: linear-gradient(135deg, #e8e8f8 0%, #6366f1 45%, #06b6d4 100%);
+  background: linear-gradient(135deg, rgb(var(--color-fg)) 0%, #6366f1 45%, #06b6d4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

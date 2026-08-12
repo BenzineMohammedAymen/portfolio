@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import useTheme from "../hooks/useTheme";
 
 const links = [
   { href: "#about", label: "About" },
@@ -16,6 +17,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
   const [progress, setProgress] = useState(0);
+  const [theme, toggleTheme] = useTheme();
 
   useEffect(() => {
     function onScroll() {
@@ -50,7 +52,7 @@ export default function Navbar() {
               <a
                 href={l.href}
                 className={`text-sm font-medium transition ${
-                  active === l.href ? "text-white" : "text-slate-400 hover:text-white"
+                  active === l.href ? "text-fg" : "text-muted hover:text-fg"
                 }`}
               >
                 {l.label}
@@ -59,15 +61,22 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted hover:text-fg hover:border-indigo/40 transition"
+          >
+            {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+          </button>
           <a
             href="#contact"
-            className="hidden md:inline-block bg-gradient-to-br from-indigo to-violet text-white text-sm font-semibold px-5 py-2 rounded-lg hover:opacity-85 transition"
+            className="hidden md:inline-block bg-gradient-to-br from-indigo to-violet text-fg text-sm font-semibold px-5 py-2 rounded-lg hover:opacity-85 transition"
           >
             Hire Me
           </a>
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-slate-300"
+            className="md:hidden text-slate-700 dark:text-slate-300"
             aria-label="Toggle menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -82,11 +91,18 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-xl font-semibold text-slate-300 hover:text-white"
+              className="text-xl font-semibold text-slate-700 dark:text-slate-300 hover:text-fg"
             >
               {l.label}
             </a>
           ))}
+          <button
+            onClick={toggleTheme}
+            className="flex items-center gap-2 text-sm font-medium text-muted hover:text-fg transition"
+          >
+            {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+            {theme === "dark" ? "Light mode" : "Dark mode"}
+          </button>
         </div>
       )}
     </>

@@ -32,12 +32,12 @@ export default function Hero() {
             ))}
           </div>
 
-          <p className="text-slate-300 max-w-md mb-8 leading-relaxed">{profile.tagline}</p>
+          <p className="text-slate-700 dark:text-slate-300 max-w-md mb-8 leading-relaxed">{profile.tagline}</p>
 
           <div className="flex flex-wrap gap-3 mb-10">
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 bg-gradient-to-br from-indigo to-violet text-white font-semibold text-sm px-6 py-3 rounded-xl hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo/35 transition"
+              className="inline-flex items-center gap-2 bg-gradient-to-br from-indigo to-violet text-fg font-semibold text-sm px-6 py-3 rounded-xl hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo/35 transition"
             >
               <Mail size={16} /> Contact Me
             </a>
@@ -45,7 +45,7 @@ export default function Hero() {
               href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-white/20 text-white font-medium text-sm px-6 py-3 rounded-xl hover:border-indigo hover:text-indigo-300 hover:-translate-y-0.5 transition"
+              className="inline-flex items-center gap-2 border border-line/20 text-fg font-medium text-sm px-6 py-3 rounded-xl hover:border-indigo hover:text-indigo-300 hover:-translate-y-0.5 transition"
             >
               <Github size={16} /> GitHub
             </a>
@@ -53,7 +53,7 @@ export default function Hero() {
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-white/20 text-white font-medium text-sm px-6 py-3 rounded-xl hover:border-indigo hover:text-indigo-300 hover:-translate-y-0.5 transition"
+              className="inline-flex items-center gap-2 border border-line/20 text-fg font-medium text-sm px-6 py-3 rounded-xl hover:border-indigo hover:text-indigo-300 hover:-translate-y-0.5 transition"
             >
               <Linkedin size={16} /> LinkedIn
             </a>
@@ -65,7 +65,7 @@ export default function Hero() {
                 <div className="text-2xl font-extrabold bg-gradient-to-br from-indigo to-violet bg-clip-text text-transparent">
                   {s.value}
                 </div>
-                <div className="text-xs text-slate-400 mt-1 leading-relaxed">{s.label}</div>
+                <div className="text-xs text-muted mt-1 leading-relaxed">{s.label}</div>
               </div>
             ))}
           </div>

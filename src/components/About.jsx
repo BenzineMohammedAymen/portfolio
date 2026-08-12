@@ -14,11 +14,11 @@ export default function About() {
           <img
             src={profilePhoto}
             alt="Mohammed Aymen Benzine"
-            className="w-full rounded-3xl object-cover object-[center_10%] max-h-[520px] border border-white/10"
+            className="w-full rounded-3xl object-cover object-[center_10%] max-h-[520px] border border-line/10"
           />
           <div className="absolute -bottom-6 -right-6 bg-card/95 border border-border rounded-2xl px-5 py-4 backdrop-blur-xl min-w-[170px]">
             <div className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Current Role</div>
-            <div className="text-sm font-bold text-white">IT Engineer</div>
+            <div className="text-sm font-bold text-fg">IT Engineer</div>
             <div className="text-xs text-indigo-300 mt-0.5">ETTR · Ouargla, Algeria</div>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function About() {
           </h2>
           <div className="space-y-5">
             {about.paragraphs.map((p, i) => (
-              <p key={i} className="text-slate-300 leading-loose text-[15px]">
+              <p key={i} className="text-slate-700 dark:text-slate-300 leading-loose text-[15px]">
                 <Bold text={p} />
               </p>
             ))}

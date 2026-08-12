@@ -8,14 +8,14 @@ function AchCard({ ach, delay }) {
   return (
     <div
       ref={ref}
-      className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl p-7 text-center relative overflow-hidden group hover:border-white/15 hover:-translate-y-1 transition-all`}
+      className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl p-7 text-center relative overflow-hidden group hover:border-line/15 hover:-translate-y-1 transition-all`}
       style={{ transitionDelay: delay }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-indigo to-violet opacity-0 group-hover:opacity-[0.04] transition-opacity" />
       <div className="relative z-10">
         <Icon size={28} className="mx-auto mb-3 text-indigo-300" />
-        <div className="text-sm font-bold text-white mb-1.5">{ach.title}</div>
-        <div className="text-xs text-slate-400 leading-relaxed">{ach.desc}</div>
+        <div className="text-sm font-bold text-fg mb-1.5">{ach.title}</div>
+        <div className="text-xs text-muted leading-relaxed">{ach.desc}</div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export default function Bold({ text }) {
     <>
       {parts.map((part, i) =>
         part.startsWith("**") && part.endsWith("**") ? (
-          <strong key={i} className="text-white font-semibold">
+          <strong key={i} className="text-fg font-semibold">
             {part.slice(2, -2)}
           </strong>
         ) : (

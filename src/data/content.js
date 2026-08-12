@@ -64,7 +64,7 @@ export const education = [
 export const experience = [
   {
     icon: "Brain",
-    logo: "https://www.google.com/s2/favicons?domain=piopetro.org&sz=128",
+    logo: "https://img1.wsimg.com/isteam/ip/03be8d7e-1b14-4b48-b45a-24588a396428/PioPetro-Foundation-Empowering-Future-Petroleu.png",
     role: "Machine Learning Intern",
     company: "PioPetro — Sponsored by SLB, Halliburton & NOV",
     period: "Aug 2026 – Present",
@@ -160,7 +160,7 @@ export const leadership = [
   },
   {
     icon: "Network",
-    logo: "https://www.google.com/s2/favicons?domain=451alliance.com&sz=128",
+    logo: "https://www.451alliance.com/Portals/5/451Alliance_spg_pos_rgb_Medium-PNG.png",
     org: "451 Alliance",
     role: "Member",
     link: "https://www.451alliance.com/",

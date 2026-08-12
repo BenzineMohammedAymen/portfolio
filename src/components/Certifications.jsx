@@ -17,15 +17,15 @@ function CertCard({ cert, delay }) {
   return (
     <div
       ref={ref}
-      className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl p-6 flex gap-4 items-start hover:border-white/15 hover:-translate-y-0.5 transition-all`}
+      className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl p-6 flex gap-4 items-start hover:border-line/15 hover:-translate-y-0.5 transition-all`}
       style={{ transitionDelay: delay }}
     >
       <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${c.bg}`}>
         <Icon size={20} className={c.text} />
       </div>
       <div>
-        <div className="text-sm font-bold text-white mb-1">{cert.title}</div>
-        <div className="text-xs text-slate-400">{cert.org}</div>
+        <div className="text-sm font-bold text-fg mb-1">{cert.title}</div>
+        <div className="text-xs text-muted">{cert.org}</div>
         <span className={`inline-block mt-2 rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${c.badgeBg} border ${c.badgeBorder} ${c.badgeText}`}>
           {cert.tag}
         </span>
@@ -42,7 +42,7 @@ export default function Certifications() {
           <span className="w-4 h-0.5 bg-indigo-400 rounded" /> Certifications
         </div>
         <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Certificates & Awards</h2>
-        <p className="text-slate-400 max-w-xl mb-14 leading-relaxed">
+        <p className="text-muted max-w-xl mb-14 leading-relaxed">
           Official certificates and academic awards that show my skills in AI and professional growth.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

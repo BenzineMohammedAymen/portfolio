@@ -16,7 +16,7 @@ function LeadershipCard({ entry, delay }) {
           {entry.logo ? (
             <img src={entry.logo} alt={`${entry.org} logo`} className="w-12 h-12 object-contain rounded-lg bg-white/95 p-1.5" loading="lazy" />
           ) : (
-            <Icon size={32} className="text-white" />
+            <Icon size={32} className="text-fg" />
           )}
         </div>
         <span className="bg-indigo/10 border border-indigo/20 rounded-full px-3.5 py-1 text-xs text-indigo-200 font-mono whitespace-nowrap">
@@ -24,7 +24,7 @@ function LeadershipCard({ entry, delay }) {
         </span>
       </div>
       <div>
-        <div className="text-2xl font-extrabold text-white mb-1">{entry.org}</div>
+        <div className="text-2xl font-extrabold text-fg mb-1">{entry.org}</div>
         <div className="text-base text-indigo-300 font-semibold mb-1">{entry.role}</div>
         <a
           href={entry.link}
@@ -34,10 +34,10 @@ function LeadershipCard({ entry, delay }) {
         >
           <Icons.ExternalLink size={13} /> {entry.linkLabel}
         </a>
-        <p className="text-slate-300 leading-loose mb-6">{entry.desc}</p>
+        <p className="text-slate-700 dark:text-slate-300 leading-loose mb-6">{entry.desc}</p>
         <div className="grid sm:grid-cols-2 gap-2.5 mb-6">
           {entry.points.map((p) => (
-            <div key={p} className="flex items-start gap-2 text-sm text-slate-400">
+            <div key={p} className="flex items-start gap-2 text-sm text-muted">
               <span className="text-indigo-400 text-[8px] mt-2">◆</span>
               {p}
             </div>
@@ -45,7 +45,7 @@ function LeadershipCard({ entry, delay }) {
         </div>
         <div className="flex flex-wrap gap-2">
           {entry.tags.map((t) => (
-            <span key={t} className="bg-white/5 border border-white/10 rounded-md px-2.5 py-1 text-xs text-slate-400">
+            <span key={t} className="bg-line/5 border border-line/10 rounded-md px-2.5 py-1 text-xs text-muted">
               {t}
             </span>
           ))}
@@ -63,7 +63,7 @@ export default function Leadership() {
           <span className="w-4 h-0.5 bg-indigo-400 rounded" /> Leadership & Community
         </div>
         <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Growing the AI Community</h2>
-        <p className="text-slate-400 max-w-xl mb-14 leading-relaxed">
+        <p className="text-muted max-w-xl mb-14 leading-relaxed">
           Outside of engineering work, I care about helping more people learn AI skills in my region.
         </p>
 

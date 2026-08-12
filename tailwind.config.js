@@ -1,14 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        bg: "#080810",
-        bg2: "#0c0c18",
-        card: "#0e0e1e",
-        card2: "#131325",
-        border: "rgba(255,255,255,0.08)",
+        bg: "rgb(var(--color-bg) / <alpha-value>)",
+        bg2: "rgb(var(--color-bg2) / <alpha-value>)",
+        card: "rgb(var(--color-card) / <alpha-value>)",
+        card2: "rgb(var(--color-card2) / <alpha-value>)",
+        border: "var(--color-border)",
+        fg: "rgb(var(--color-fg) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        line: "rgb(var(--color-line) / <alpha-value>)",
         indigo: "#6366f1",
         violet: "#8b5cf6",
         cyan: "#06b6d4",
