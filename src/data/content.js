@@ -93,47 +93,41 @@ export const experience = [
     tags: ["Real-Time Data", "Sports Analytics", "Data Annotation", "Quality Assurance", "Remote Collaboration"],
   },
   {
-    icon: "Settings",
-    role: "IT Engineer / Data Analyst",
+    icon: "Cpu",
+    role: "AI & Systems Engineer",
     company: "ETTR, Entreprise de Terrassement et Travaux Routiers, Ouargla, Algeria",
     period: "Oct 2025 – Present",
     points: [
-      "Set up and manage the company's full IT network, including LAN, VLANs, and user computers",
-      "Led the switch from ADSL to fiber optic internet with no downtime",
-      "Set up and look after modems, Wi-Fi routers, network devices, and cables",
-      "Manage internal servers, user accounts, and shared company files",
-      "Installed and maintain CCTV cameras and the office phone system",
-      "Fix network, hardware, and access problems when they come up",
-      "Built Python and SQL tools for tracking equipment, reports, and daily tasks",
-      "Created budget dashboards and a rental tracking system (PySide6 + SQL)",
+      "Designed and deployed real-time object detection (YOLOv8) pipelines optimized with ONNX Runtime, Docker, and FastAPI for low-latency edge deployment",
+      "Built custom internal desktop applications (Python, PySide6, SQL) for project budget analysis, KPI tracking, and automated equipment rental management",
+      "Architected and managed the enterprise's entire IT infrastructure, executing a seamless zero-downtime migration to fiber optics",
+      "Administered local servers, VLANs, LAN networks, CCTV security systems, and VOIP telephony across all operations",
     ],
-    tags: ["Python", "SQL", "PySide6", "VLAN", "Windows Server", "Fiber Optics", "CCTV", "Network Admin"],
+    tags: ["YOLOv8", "ONNX Runtime", "Docker", "FastAPI", "Python", "PySide6", "VLAN", "Fiber Optics"],
   },
   {
     icon: "Laptop",
-    role: "Freelance IT Consultant & Developer",
+    role: "Freelance AI Consultant & Full-Stack Developer",
     company: "Self-employed, Ouargla, Algeria",
     period: "Sep 2021 – Present",
     points: [
-      "Built desktop apps (JavaFX, PySide6), websites (React.js), and tools connected to APIs for over 4 years",
-      "Used Figma to design clean, easy-to-use interfaces before building them",
-      "Built login systems and different access levels for different users",
-      "Created finance dashboards and reports to help clients see their numbers clearly",
-      "Set up websites online and helped clients keep their systems running",
-      "Designed Word documents, Excel sheets, PowerPoint presentations, and Canva graphics for clients who needed professional documents quickly",
+      "Architected and delivered end-to-end SaaS platforms (React.js, Next.js, Node.js) and robust desktop applications (PySide6, JavaFX) for B2B clients",
+      "Developed custom ML and data analytics tools, including predictive dashboards, NLP classification models, and RESTful API integrations",
+      "Designed intuitive UI/UX workflows in Figma and implemented secure, role-based authentication systems (Supabase, PostgreSQL)",
+      "Provided high-level business intelligence, data modeling, and reporting solutions to streamline client operations",
     ],
-    tags: ["React.js", "JavaScript", "JavaFX", "Figma", "PostgreSQL", "REST APIs", "Canva", "PowerPoint"],
+    tags: ["React.js", "Next.js", "Node.js", "PySide6", "JavaFX", "Figma", "Supabase", "PostgreSQL", "NLP"],
   },
   {
     icon: "FlaskConical",
-    role: "Technical Intern",
+    role: "Software Engineering Intern",
     company: "SAA, Société Nationale d'Assurance, Ouargla, Algeria",
     period: "Apr 2023",
     points: [
-      "Worked with AngularJS, Spring MVC, and basic networking inside a national insurance company",
-      "Learned how IT systems work inside a large, regulated business",
+      "Contributed to enterprise web application development utilizing AngularJS and Spring MVC",
+      "Gained hands-on experience in secure corporate networking and large-scale IT system architecture",
     ],
-    tags: ["AngularJS", "Spring MVC", "Networking"],
+    tags: ["AngularJS", "Spring MVC", "Enterprise Architecture", "Networking"],
   },
 ];
 
@@ -234,16 +228,17 @@ export const skills = [
 ];
 
 export const researchInterests = [
-  { icon: "BrainCircuit", name: "Deep Learning", desc: "Designing and improving neural networks" },
-  { icon: "Link2", name: "Knowledge Distillation", desc: "Making models smaller and faster" },
-  { icon: "Eye", name: "Computer Vision", desc: "Image classification and detection" },
-  { icon: "HeartPulse", name: "Medical AI", desc: "AI tools to support doctors" },
-  { icon: "Search", name: "Explainable AI", desc: "LRP, Grad-CAM, and clear AI decisions" },
-  { icon: "TrendingUp", name: "Predictive Modeling", desc: "Forecasting and outcome prediction" },
+  { icon: "Layers", name: "Knowledge Distillation & Model Compression", desc: "Ultra-lightweight neural nets (DisWOT, quantization, pruning) for edge devices" },
+  { icon: "Waves", name: "Physics-Informed & Hybrid AI (Oil & Gas)", desc: "PINNs for geophysical modeling, seismic inversion & reservoir characterization" },
+  { icon: "Gauge", name: "Real-Time Drilling & Hoisting Optimization", desc: "RL & physics-guided ML for ROP optimization and drilling hazard detection" },
+  { icon: "ShieldCheck", name: "Computer Vision & Edge AI for Industrial Safety", desc: "YOLO & Vision Transformers with ONNX Runtime for rig floor monitoring" },
+  { icon: "Puzzle", name: "Semi-Supervised & Self-Supervised Learning", desc: "Data-efficient models for medical imaging & subsurface data interpretation" },
+  { icon: "Search", name: "Explainable AI (XAI)", desc: "LRP & Grad-CAM for transparent, trustworthy AI in critical applications" },
 ];
 
 export const research = {
   title: "Improving Brain Tumor Detection Using Neural Lightweight Distillation Techniques",
+  link: "https://dspace.univ-ouargla.dz/jspui/handle/123456789/40042",
   meta: [
     { icon: "MapPin", text: "Kasdi Merbah University, Ouargla, Algeria" },
     { icon: "GraduationCap", text: "M.Sc. AI & Data Science" },
@@ -297,6 +292,7 @@ export const projects = [
     metrics: ["98% teacher accuracy", ">95% student accuracy", "~87% smaller model"],
     stack: ["TensorFlow", "Python", "LRP", "Grad-CAM", "XAI"],
     github: "https://github.com/BenzineMohammedAymen",
+    paper: "https://dspace.univ-ouargla.dz/jspui/handle/123456789/40042",
     modal: {
       subtitle: "Master's Thesis · Kasdi Merbah University · 2025 · Excellent Grade",
       sections: [

@@ -1,4 +1,4 @@
-import { X, Github, ExternalLink } from "lucide-react";
+import { X, Github, ExternalLink, BookOpen } from "lucide-react";
 import { visualMap } from "./ProjectVisuals";
 
 export default function ProjectModal({ project, onClose }) {
@@ -32,8 +32,18 @@ export default function ProjectModal({ project, onClose }) {
               </div>
             ))}
           </div>
-          {(project.live || project.github) && (
+          {(project.live || project.github || project.paper) && (
             <div className="flex flex-wrap gap-3 mt-6">
+              {project.paper && (
+                <a
+                  href={project.paper}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-gradient-to-br from-indigo to-violet text-fg text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-85 transition"
+                >
+                  <BookOpen size={15} /> View Published Thesis
+                </a>
+              )}
               {project.live && (
                 <a
                   href={project.live}

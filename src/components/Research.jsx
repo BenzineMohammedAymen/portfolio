@@ -1,4 +1,5 @@
 import * as Icons from "lucide-react";
+import { BookOpen, ExternalLink } from "lucide-react";
 import useReveal from "../hooks/useReveal";
 import Bold from "./Bold";
 import { research, researchInterests } from "../data/content";
@@ -23,7 +24,17 @@ export default function Research() {
         >
           <div className="relative z-10">
             <div className="text-xs uppercase tracking-widest text-cyan-400 font-bold mb-3">Master's Thesis · Kasdi Merbah University · 2025</div>
-            <h3 className="text-2xl font-extrabold text-fg mb-5 leading-snug max-w-3xl">{research.title}</h3>
+            <h3 className="text-2xl font-extrabold text-fg mb-3 leading-snug max-w-3xl">{research.title}</h3>
+            {research.link && (
+              <a
+                href={research.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm text-cyan-300 mb-5 hover:opacity-75 transition"
+              >
+                <BookOpen size={14} /> View Published Thesis <ExternalLink size={12} />
+              </a>
+            )}
           </div>
           <div className="flex flex-wrap gap-6 mb-6 relative z-10">
             {research.meta.map((m) => {
