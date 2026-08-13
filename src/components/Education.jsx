@@ -11,7 +11,14 @@ function EduCard({ edu, delay }) {
       style={{ transitionDelay: delay }}
     >
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-indigo to-violet scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
-      <div className="text-xs font-mono text-cyan-400 mb-3 tracking-wide">{edu.year}</div>
+      <div className="flex items-start justify-between gap-3 mb-3">
+        <div className="text-xs font-mono text-cyan-400 tracking-wide">{edu.year}</div>
+        {edu.logo && (
+          <div className="w-10 h-10 rounded-lg bg-white/95 flex items-center justify-center overflow-hidden flex-shrink-0 p-1">
+            <img src={edu.logo} alt={`${edu.school} logo`} className="w-full h-full object-contain" loading="lazy" />
+          </div>
+        )}
+      </div>
       <div className="text-lg font-bold text-fg mb-1">{edu.degree}</div>
       <div className="text-sm text-indigo-300 font-semibold mb-2">{edu.field}</div>
       <div className="text-sm text-muted mb-4 flex items-center gap-1.5">

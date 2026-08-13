@@ -20,8 +20,12 @@ function CertCard({ cert, delay }) {
       className={`reveal ${inView ? "in-view" : ""} bg-card border border-border rounded-2xl p-6 flex gap-4 items-start hover:border-line/15 hover:-translate-y-0.5 transition-all`}
       style={{ transitionDelay: delay }}
     >
-      <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${c.bg}`}>
-        <Icon size={20} className={c.text} />
+      <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden ${c.bg}`}>
+        {cert.logo ? (
+          <img src={cert.logo} alt={`${cert.org} logo`} className="w-7 h-7 object-contain rounded-sm bg-white/95 p-0.5" loading="lazy" />
+        ) : (
+          <Icon size={20} className={c.text} />
+        )}
       </div>
       <div>
         <div className="text-sm font-bold text-fg mb-1">{cert.title}</div>

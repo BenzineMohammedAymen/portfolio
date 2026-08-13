@@ -1,5 +1,10 @@
 // Central content file. All text uses simple, clear English (B2 level).
 
+import piopetroLogo from "../assets/logos/piopetro.png";
+import kasdiMerbahLogo from "../assets/logos/kasdi-merbah.png";
+import nvidiaLogo from "../assets/logos/nvidia.png";
+import aiNexusLogo from "../assets/logos/ai-nexus.png";
+
 export const profile = {
   name: "Mohammed Aymen Benzine",
   roles: ["AI Engineer", "Data Scientist", "Software Engineer", "IT Infrastructure Engineer"],
@@ -48,6 +53,7 @@ export const education = [
     degree: "Master's Degree",
     field: "Computer Science, Artificial Intelligence & Data Science",
     school: "Kasdi Merbah University, Ouargla, Algeria",
+    logo: kasdiMerbahLogo,
     desc: "I studied machine learning, deep learning, computer vision, and statistics. My final project was about finding brain tumors using a lightweight AI model. I got an Excellent grade and passed my defense in front of the jury.",
     badges: ["Top 3 graduate", "Five-Star Student", "Excellent dissertation", "Jury recognition"],
   },
@@ -56,6 +62,7 @@ export const education = [
     degree: "Bachelor's Degree",
     field: "Computer Science, Information Systems",
     school: "Kasdi Merbah University, Ouargla, Algeria",
+    logo: kasdiMerbahLogo,
     desc: "I learned algorithms, databases, software engineering, basic networking, and web development. I finished among the top 3 students. My thesis was about sorting product reviews as positive or negative, with 88% accuracy.",
     badges: ["Top 3 student", "NLP thesis: 88% accuracy"],
   },
@@ -64,7 +71,7 @@ export const education = [
 export const experience = [
   {
     icon: "Brain",
-    logo: "https://img1.wsimg.com/isteam/ip/03be8d7e-1b14-4b48-b45a-24588a396428/PioPetro-Foundation-Empowering-Future-Petroleu.png",
+    logo: piopetroLogo,
     role: "Machine Learning Intern",
     company: "PioPetro — Sponsored by SLB, Halliburton & NOV",
     period: "Aug 2026 – Present",
@@ -134,6 +141,7 @@ export const experience = [
 export const leadership = [
   {
     icon: "Bot",
+    logo: aiNexusLogo,
     org: "AI Nexus Club, Ouargla",
     role: "Co-Founder & Co-Leader",
     link: "https://www.linkedin.com/company/ai-nexus-club-ouargla/",
@@ -260,11 +268,11 @@ export const research = {
 };
 
 export const certifications = [
-  { icon: "MonitorCheck", title: "Deep Learning Fundamentals", org: "NVIDIA Corporation", tag: "Industry certificate", color: "cyan" },
-  { icon: "Star", title: "Five-Star Student Certificate", org: "Kasdi Merbah University, Ouargla", tag: "Academic excellence", color: "amber" },
-  { icon: "Award", title: "Top 3 Graduate: M.Sc. AI & Data Science", org: "Kasdi Merbah University, Ouargla", tag: "Academic excellence", color: "violet" },
+  { icon: "MonitorCheck", logo: nvidiaLogo, title: "Deep Learning Fundamentals", org: "NVIDIA Corporation", tag: "Industry certificate", color: "cyan" },
+  { icon: "Star", logo: kasdiMerbahLogo, title: "Five-Star Student Certificate", org: "Kasdi Merbah University, Ouargla", tag: "Academic excellence", color: "amber" },
+  { icon: "Award", logo: kasdiMerbahLogo, title: "Top 3 Graduate: M.Sc. AI & Data Science", org: "Kasdi Merbah University, Ouargla", tag: "Academic excellence", color: "violet" },
   { icon: "Wallet", title: "Financial Literacy Training", org: "Career Center, University of Ouargla", tag: "Professional skill", color: "emerald" },
-  { icon: "PenLine", title: "Write It Right Workshop", org: "Kasdi Merbah University, Ouargla", tag: "Academic skill", color: "indigo" },
+  { icon: "PenLine", logo: kasdiMerbahLogo, title: "Write It Right Workshop", org: "Kasdi Merbah University, Ouargla", tag: "Academic skill", color: "indigo" },
   { icon: "Bot", title: "Introduction to Artificial Intelligence", org: "Online certification", tag: "AI basics", color: "amber" },
 ];
 
